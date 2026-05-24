@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <style>
+      @font-face {
+        font-family: 'Lora';
+        src: url('../fonts/Lora-Regular.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
+  </defs>
+  <text
+    x="512"
+    y="512"
+    text-anchor="middle"
+    dominant-baseline="central"
+    font-family="Lora, Georgia, serif"
+    font-size="280"
+    font-weight="400"
+    textLength="660" lengthAdjust="spacing"
+  ><tspan fill="#f0f4f8">Feel</tspan><tspan fill="#4da8da">.</tspan></text>
+</svg>
+

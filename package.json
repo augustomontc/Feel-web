@@ -1,5 +1,12 @@
 {
   "dependencies": {
     "@vercel/analytics": "^2.0.1"
+  },
+  "devDependencies": {
+    "opentype.js": "^2.0.0",
+    "sharp": "^0.34.5"
+  },
+  "scripts": {
+    "render-logo": "node scripts/layout-logo-text.mjs && node scripts/render-logo-png.mjs"
   }
 }
