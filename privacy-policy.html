@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Feel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy-deep:  #0b1629;
+      --navy-mid:   #0f2040;
+      --navy-light: #1a3260;
+      --mist:       #7a9cc0;
+      --white:      #f0f4f8;
+      --white-dim:  #c0cdd9;
+      --accent:     #4da8da;
+      --accent-warm:#7ecef4;
+      --border:     rgba(255,255,255,0.07);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--navy-deep);
+      color: var(--white);
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 100% 70% at 15% 0%, rgba(30,61,110,0.9) 0%, transparent 55%),
+        radial-gradient(ellipse 80% 60% at 85% 100%, rgba(11,22,41,0.95) 0%, transparent 50%);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem 6%;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .nav-logo {
+      font-family: 'Lora', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      color: var(--white);
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .nav-logo span { color: var(--accent); }
+
+    .nav-back {
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      color: var(--mist);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--accent-warm); }
+    .nav-back svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; }
+
+    /* ── CONTENT ── */
+    .page-wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3rem 6% 6rem;
+    }
+
+    .page-eyebrow {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.2rem;
+    }
+
+    .page-title {
+      font-family: 'Lora', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 0.6rem;
+    }
+
+    .page-updated {
+      font-size: 0.75rem;
+      color: var(--mist);
+      letter-spacing: 0.04em;
+      margin-bottom: 3.5rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* Sections */
+    .section { margin-bottom: 3rem; }
+
+    .section h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--white);
+      margin-bottom: 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section p {
+      font-size: 0.95rem;
+      font-weight: 300;
+      line-height: 1.85;
+      color: var(--white-dim);
+      margin-bottom: 1rem;
+    }
+
+    .section p:last-child { margin-bottom: 0; }
+
+    .section ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+
+    .section ul li {
+      font-size: 0.95rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--white-dim);
+      padding: 0.35rem 0 0.35rem 1.4rem;
+      position: relative;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .section ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.8rem;
+    }
+
+    /* Contact block */
+    .contact-block {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.8rem 2rem;
+      margin-top: 3rem;
+    }
+
+    .contact-block p {
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--white-dim);
+      margin: 0;
+    }
+
+    .contact-block a {
+      color: var(--accent-warm);
+      text-decoration: none;
+    }
+    .contact-block a:hover { text-decoration: underline; }
+
+    /* ── FOOTER ── */
+    footer {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 6%;
+    }
+    .footer-inner {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+    }
+    .footer-brand {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      color: var(--mist);
+    }
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: var(--mist);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--accent-warm); }
+    .footer-copy {
+      font-size: 0.7rem;
+      color: rgba(120,155,185,0.55);
+      width: 100%;
+      text-align: center;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      margin-top: 0.5rem;
+    }
+
+    @media (max-width: 640px) {
+      .footer-inner { justify-content: center; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Feel<span>.</span></a>
+    <a href="index.html" class="nav-back">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      Back to home
+    </a>
+  </nav>
+
+  <main class="page-wrap">
+
+    <p class="page-eyebrow">Legal</p>
+    <h1 class="page-title">Privacy Policy</h1>
+    <p class="page-updated">Last updated: May 24, 2026</p>
+
+    <div class="section">
+      <h2>1. Introduction</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis.</p>
+    </div>
+
+    <div class="section">
+      <h2>2. Information We Collect</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. We may collect the following types of information when you use Feel:</p>
+      <ul>
+        <li>Location data to provide accurate, hyper-local weather conditions</li>
+        <li>Device identifiers for app functionality and crash diagnostics</li>
+        <li>Usage patterns and in-app interactions to improve the experience</li>
+        <li>Preferences and settings you configure within the app</li>
+        <li>Diagnostic and performance data to maintain app stability</li>
+      </ul>
+      <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</p>
+    </div>
+
+    <div class="section">
+      <h2>3. How We Use Your Information</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur adipisci velit.</p>
+      <ul>
+        <li>To deliver real-time, location-aware weather descriptions</li>
+        <li>To personalise your in-app experience based on preferences</li>
+        <li>To diagnose technical issues and improve app performance</li>
+        <li>To communicate service updates and important notices</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>4. Data Sharing and Third Parties</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+      <p>Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat.</p>
+    </div>
+
+    <div class="section">
+      <h2>5. Location Data</h2>
+      <p>Feel uses your device's location to provide accurate, real-time weather descriptions for where you actually are. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
+      <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Location data is never sold to third parties or used for advertising purposes.</p>
+    </div>
+
+    <div class="section">
+      <h2>6. Data Retention</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. We retain your data only for as long as necessary to provide the service.</p>
+    </div>
+
+    <div class="section">
+      <h2>7. Your Rights</h2>
+      <p>Depending on your jurisdiction, you may have the following rights regarding your personal data:</p>
+      <ul>
+        <li>The right to access the personal data we hold about you</li>
+        <li>The right to request correction of inaccurate data</li>
+        <li>The right to request deletion of your personal data</li>
+        <li>The right to withdraw consent at any time</li>
+        <li>The right to lodge a complaint with a supervisory authority</li>
+      </ul>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+    </div>
+
+    <div class="section">
+      <h2>8. Security</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. We implement industry-standard security measures to protect your personal information against unauthorised access, alteration, disclosure, or destruction. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+    </div>
+
+    <div class="section">
+      <h2>9. Children's Privacy</h2>
+      <p>Feel is not directed at children under the age of 13. Lorem ipsum dolor sit amet, consectetur adipiscing elit. We do not knowingly collect personal information from children. If you believe we have inadvertently collected such information, please contact us immediately.</p>
+    </div>
+
+    <div class="section">
+      <h2>10. Changes to This Policy</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. We reserve the right to update this Privacy Policy at any time. We will notify you of significant changes through the app or by updating the date at the top of this page.</p>
+    </div>
+
+    <div class="contact-block">
+      <p>Questions about this Privacy Policy? Reach us at <a href="mailto:privacy@feelsweather.app">privacy@feelsweather.app</a> and we'll get back to you as soon as possible.</p>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">Feel &nbsp;·&nbsp; Weather Beyond Numbers</span>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="https://apps.apple.com" target="_blank" rel="noopener">App Store</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+      </nav>
+    </div>
+    <p class="footer-copy">&copy; <script>document.write(new Date().getFullYear())</script> Feel. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms &amp; Conditions — Feel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy-deep:  #0b1629;
+      --navy-mid:   #0f2040;
+      --navy-light: #1a3260;
+      --mist:       #7a9cc0;
+      --white:      #f0f4f8;
+      --white-dim:  #c0cdd9;
+      --accent:     #4da8da;
+      --accent-warm:#7ecef4;
+      --border:     rgba(255,255,255,0.07);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--navy-deep);
+      color: var(--white);
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 100% 70% at 15% 0%, rgba(30,61,110,0.9) 0%, transparent 55%),
+        radial-gradient(ellipse 80% 60% at 85% 100%, rgba(11,22,41,0.95) 0%, transparent 50%);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem 6%;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .nav-logo {
+      font-family: 'Lora', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      color: var(--white);
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .nav-logo span { color: var(--accent); }
+
+    .nav-back {
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      color: var(--mist);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--accent-warm); }
+    .nav-back svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; }
+
+    /* ── CONTENT ── */
+    .page-wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3rem 6% 6rem;
+    }
+
+    .page-eyebrow {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.2rem;
+    }
+
+    .page-title {
+      font-family: 'Lora', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 0.6rem;
+    }
+
+    .page-updated {
+      font-size: 0.75rem;
+      color: var(--mist);
+      letter-spacing: 0.04em;
+      margin-bottom: 3.5rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section { margin-bottom: 3rem; }
+
+    .section h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--white);
+      margin-bottom: 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section p {
+      font-size: 0.95rem;
+      font-weight: 300;
+      line-height: 1.85;
+      color: var(--white-dim);
+      margin-bottom: 1rem;
+    }
+
+    .section p:last-child { margin-bottom: 0; }
+
+    .section ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+
+    .section ul li {
+      font-size: 0.95rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--white-dim);
+      padding: 0.35rem 0 0.35rem 1.4rem;
+      position: relative;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .section ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.8rem;
+    }
+
+    .contact-block {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.8rem 2rem;
+      margin-top: 3rem;
+    }
+
+    .contact-block p {
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--white-dim);
+      margin: 0;
+    }
+
+    .contact-block a {
+      color: var(--accent-warm);
+      text-decoration: none;
+    }
+    .contact-block a:hover { text-decoration: underline; }
+
+    /* ── FOOTER ── */
+    footer {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 6%;
+    }
+    .footer-inner {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+    }
+    .footer-brand {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      color: var(--mist);
+    }
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: var(--mist);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--accent-warm); }
+    .footer-copy {
+      font-size: 0.7rem;
+      color: rgba(120,155,185,0.55);
+      width: 100%;
+      text-align: center;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      margin-top: 0.5rem;
+    }
+
+    @media (max-width: 640px) {
+      .footer-inner { justify-content: center; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Feel<span>.</span></a>
+    <a href="index.html" class="nav-back">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      Back to home
+    </a>
+  </nav>
+
+  <main class="page-wrap">
+
+    <p class="page-eyebrow">Legal</p>
+    <h1 class="page-title">Terms &amp; Conditions</h1>
+    <p class="page-updated">Last updated: May 24, 2026</p>
+
+    <div class="section">
+      <h2>1. Acceptance of Terms</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. By downloading or using Feel, you agree to be bound by these Terms and Conditions. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. If you do not agree to these terms, please do not use the application.</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    </div>
+
+    <div class="section">
+      <h2>2. Description of Service</h2>
+      <p>Feel is a weather application that translates meteorological data into human, sensory-led descriptions. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis.</p>
+    </div>
+
+    <div class="section">
+      <h2>3. User Eligibility</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. You must be at least 13 years of age to use Feel. By using the application you represent and warrant that you meet this requirement. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+      <ul>
+        <li>You are at least 13 years of age</li>
+        <li>You have the legal capacity to enter into a binding agreement</li>
+        <li>Your use of the service does not violate any applicable laws</li>
+        <li>All information you provide is accurate and up to date</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>4. Intellectual Property</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. All content, design, graphics, weather descriptions, and underlying technology within Feel are the exclusive property of Feel and its licensors. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+      <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident. You may not reproduce, distribute, or create derivative works without express written permission.</p>
+    </div>
+
+    <div class="section">
+      <h2>5. Acceptable Use</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. You agree not to misuse the Feel application. The following activities are strictly prohibited:</p>
+      <ul>
+        <li>Attempting to reverse-engineer or decompile any part of the app</li>
+        <li>Using the service for any unlawful or fraudulent purpose</li>
+        <li>Interfering with or disrupting the integrity of the service</li>
+        <li>Scraping or harvesting data from the application</li>
+        <li>Impersonating any person or entity</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>6. Weather Data Accuracy</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. While we strive to provide accurate and timely weather information, Feel does not guarantee the accuracy, completeness, or reliability of any weather data or descriptions presented within the application.</p>
+      <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Weather conditions can change rapidly and you should not rely solely on Feel for safety-critical decisions.</p>
+    </div>
+
+    <div class="section">
+      <h2>7. In-App Purchases &amp; Subscriptions</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Feel may offer optional in-app purchases or subscription plans. All purchases are processed through Apple's App Store and are subject to Apple's terms and refund policies.</p>
+      <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Subscriptions auto-renew unless cancelled at least 24 hours before the end of the current period.</p>
+    </div>
+
+    <div class="section">
+      <h2>8. Disclaimer of Warranties</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feel is provided on an "as is" and "as available" basis without warranties of any kind, either express or implied. We do not warrant that the service will be uninterrupted, error-free, or free of harmful components.</p>
+    </div>
+
+    <div class="section">
+      <h2>9. Limitation of Liability</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. To the fullest extent permitted by applicable law, Feel and its affiliates shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of — or inability to use — the application.</p>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+
+    <div class="section">
+      <h2>10. Governing Law</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. These Terms and Conditions shall be governed by and construed in accordance with the laws of the Province of Ontario, Canada, without regard to its conflict of law provisions.</p>
+    </div>
+
+    <div class="section">
+      <h2>11. Changes to These Terms</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. We reserve the right to modify these Terms at any time. Continued use of the application following any changes constitutes your acceptance of the revised Terms.</p>
+    </div>
+
+    <div class="contact-block">
+      <p>Questions about these Terms? Reach us at <a href="mailto:legal@feelsweather.app">legal@feelsweather.app</a> and we'll get back to you as soon as possible.</p>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">Feel &nbsp;·&nbsp; Weather Beyond Numbers</span>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="https://apps.apple.com" target="_blank" rel="noopener">App Store</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+      </nav>
+    </div>
+    <p class="footer-copy">&copy; <script>document.write(new Date().getFullYear())</script> Feel. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
