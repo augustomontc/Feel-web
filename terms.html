@@ -56,15 +56,15 @@
     }
 
     .nav-logo {
-      font-family: 'Lora', serif;
-      font-size: 1.5rem;
-      font-weight: 400;
-      letter-spacing: 0.18em;
-      color: var(--white);
+      display: inline-block;
       text-decoration: none;
-      text-transform: uppercase;
+      line-height: 0;
     }
-    .nav-logo span { color: var(--accent); }
+    .nav-logo img {
+      display: block;
+      height: 2.5rem;
+      width: auto;
+    }
 
     .nav-back {
       font-size: 0.78rem;
@@ -241,7 +241,7 @@
 <body>
 
   <nav>
-    <a href="/" class="nav-logo">Feel<span>.</span></a>
+    <a href="/" class="nav-logo"><img src="/assets/logo/feel-text-mixed-1024.png" alt="Feel." width="1024" height="1024" /></a>
     <a href="/" class="nav-back">
       <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
       Back to home
