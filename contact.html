@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <title>Contact — Feel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy-deep:  #0b1629;
+      --navy-mid:   #0f2040;
+      --navy-light: #1a3260;
+      --mist:       #7a9cc0;
+      --white:      #f0f4f8;
+      --white-dim:  #c0cdd9;
+      --accent:     #4da8da;
+      --accent-warm:#7ecef4;
+      --border:     rgba(255,255,255,0.07);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--navy-deep);
+      color: var(--white);
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 100% 70% at 15% 0%, rgba(30,61,110,0.9) 0%, transparent 55%),
+        radial-gradient(ellipse 80% 60% at 85% 100%, rgba(11,22,41,0.95) 0%, transparent 50%);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem 6%;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .nav-logo {
+      display: inline-block;
+      text-decoration: none;
+      line-height: 0;
+    }
+    .nav-logo img {
+      display: block;
+      height: 2.5rem;
+      width: auto;
+    }
+
+    .nav-back {
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      color: var(--mist);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--accent-warm); }
+    .nav-back svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; }
+
+    /* ── CONTENT ── */
+    .page-wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 3rem 6% 6rem;
+    }
+
+    .page-eyebrow {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.2rem;
+    }
+
+    .page-title {
+      font-family: 'Lora', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+
+    .page-intro {
+      font-size: 0.95rem;
+      font-weight: 300;
+      line-height: 1.85;
+      color: var(--white-dim);
+      max-width: 36rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn-mailto {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent);
+      color: var(--navy-deep);
+      text-decoration: none;
+      padding: 0.85rem 1.8rem;
+      border-radius: 999px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+      box-shadow: 0 4px 20px rgba(77, 168, 218, 0.18);
+    }
+    .btn-mailto:hover {
+      background: var(--accent-warm);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(77, 168, 218, 0.32);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 6%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer-inner {
+      width: min(100%, 48rem);
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .footer-brand {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      color: var(--mist);
+      flex-shrink: 0;
+    }
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-shrink: 0;
+    }
+    .footer-links a {
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: var(--mist);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--accent-warm); }
+    .footer-copy {
+      font-size: 0.7rem;
+      color: rgba(120,155,185,0.55);
+      width: min(100%, 48rem);
+      text-align: center;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      margin-top: 0.5rem;
+    }
+
+    @media (max-width: 640px) {
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.2rem;
+      }
+      .footer-links { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo"><img src="/assets/logo/feel-wordmark.png" alt="Feel." /></a>
+    <a href="/" class="nav-back">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      Back to home
+    </a>
+  </nav>
+
+  <main class="page-wrap">
+
+    <p class="page-eyebrow">Support</p>
+    <h1 class="page-title">Contact</h1>
+    <p class="page-intro">Questions about Feel or the app? Send us an email and we'll get back to you as soon as possible.</p>
+    <a href="mailto:contact@feelweather.app" class="btn-mailto">Email us</a>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">Feel &nbsp;·&nbsp; Weather Beyond Numbers</span>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms">Terms &amp; Conditions</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+    <p class="footer-copy">&copy; <script>document.write(new Date().getFullYear())</script> Feel. All rights reserved.</p>
+  </footer>
+
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
