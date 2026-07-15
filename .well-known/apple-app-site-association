@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "66VWZ2J8T7.com.feelweather.FeelWeather",
+        "paths": ["/tiktok", "/tiktok/*"]
+      }
+    ]
+  }
+}

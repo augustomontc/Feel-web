@@ -1,5 +1,13 @@
 {
   "cleanUrls": true,
+  "headers": [
+    {
+      "source": "/.well-known/apple-app-site-association",
+      "headers": [
+        { "key": "Content-Type", "value": "application/json" }
+      ]
+    }
+  ],
   "redirects": [
     { "source": "/privacy-policy.html", "destination": "/privacy-policy", "permanent": true },
     { "source": "/terms.html", "destination": "/terms", "permanent": true },
