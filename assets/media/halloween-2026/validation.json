@@ -1,0 +1,81 @@
+{
+  "atmosphere" : "night, partly cloudy, light wind, fog, no precipitation",
+  "durationSeconds" : 8,
+  "encodingNotes" : "All-intra H.264; decoded seam must be no greater than two adjacent-frame steps.",
+  "eventDetailsComposition" : {
+    "assumedOverlayStartFraction" : 0.56,
+    "assumedOverlayStartYPixels" : 1075,
+    "fadeCurve" : "five-stop-smoothstep-opacity-mask",
+    "fadeFramePixels" : {
+      "height" : 192,
+      "width" : 1080,
+      "x" : 0,
+      "y" : 960
+    },
+    "horizontalCropPixelsPerSide" : 36,
+    "layout" : "top-anchored-square-with-bottom-fade",
+    "lowerExtensionColor" : "#292A30",
+    "sceneFramePixels" : {
+      "height" : 1152,
+      "width" : 1152,
+      "x" : -36,
+      "y" : 0
+    },
+    "solidLowerExtensionFraction" : 0.4,
+    "solidLowerExtensionFramePixels" : {
+      "height" : 768,
+      "width" : 1080,
+      "x" : 0,
+      "y" : 1152
+    }
+  },
+  "files" : [
+    {
+      "adjacentFrameMeanDifference" : 0.002350530541434681,
+      "audioTrackCount" : 0,
+      "codec" : "H.264",
+      "colorPrimaries" : "ITU_R_709_2",
+      "durationSeconds" : 8,
+      "fileSizeBytes" : 19540047,
+      "filename" : "harvest-village-event-card-1920x1080.mp4",
+      "frameCount" : 240,
+      "height" : 1080,
+      "lightMotionChangedFraction" : 0.020963541666666665,
+      "loopSeamMeanDifference" : 0.0037884844266924877,
+      "loopSeamPassed" : true,
+      "nominalFrameRate" : 30,
+      "skyMotionChangedFraction" : 0.08241228070175438,
+      "transferFunction" : "ITU_R_709_2",
+      "width" : 1920,
+      "yCbCrMatrix" : "ITU_R_709_2"
+    },
+    {
+      "adjacentFrameMeanDifference" : 0.0011723099733720649,
+      "audioTrackCount" : 0,
+      "codec" : "H.264",
+      "colorPrimaries" : "ITU_R_709_2",
+      "durationSeconds" : 8,
+      "fadeEndMeanDifference" : 0,
+      "fadeStartMeanDifference" : 0.0033030743161462117,
+      "fileSizeBytes" : 15434125,
+      "filename" : "harvest-village-event-details-1080x1920.mp4",
+      "frameCount" : 240,
+      "height" : 1920,
+      "lightMotionChangedFraction" : 0.025591563786008232,
+      "loopSeamMeanDifference" : 0.001988350278382958,
+      "loopSeamPassed" : true,
+      "nominalFrameRate" : 30,
+      "skyMotionChangedFraction" : 0.03960905349794239,
+      "solidLowerExtensionSourceMaximumChannelDeviation" : 0,
+      "transferFunction" : "ITU_R_709_2",
+      "width" : 1080,
+      "yCbCrMatrix" : "ITU_R_709_2"
+    }
+  ],
+  "frameCount" : 240,
+  "frameRate" : 30,
+  "generatedAt" : "2026-09-04T21:30:52Z",
+  "loopBlendDurationSeconds" : 1,
+  "preset" : "halloween-2026",
+  "scene" : "scene-halloween-harvest-village"
+}

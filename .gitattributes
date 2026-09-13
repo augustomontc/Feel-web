@@ -1,0 +1,7 @@
+# Large press/media binaries go to LFS, matching the Feel repo's convention for the same
+# artifacts (see its artifacts/app-store-events/** rules). Scoped to assets/media/ so the
+# already-committed logo and favicon assets stay ordinary blobs.
+assets/media/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
+assets/media/**/*.png filter=lfs diff=lfs merge=lfs -text
+assets/media/**/*.webp filter=lfs diff=lfs merge=lfs -text
+assets/media/**/*.zip filter=lfs diff=lfs merge=lfs -text

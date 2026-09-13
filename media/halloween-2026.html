@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <title>Media Assets — Feel, Halloween 2026</title>
+  <meta name="description" content="Press and editorial assets for the Feel 1.11 Halloween scene collection." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy-deep:  #0b1629;
+      --navy-mid:   #0f2040;
+      --mist:       #7a9cc0;
+      --white:      #f0f4f8;
+      --white-dim:  #c0cdd9;
+      --accent:     #4da8da;
+      --accent-warm:#7ecef4;
+      --gold:       #b8a06a;
+      --border:     rgba(255,255,255,0.07);
+      --panel:      rgba(255,255,255,0.03);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--navy-deep);
+      color: var(--white);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 100% 70% at 15% 0%, rgba(30,61,110,0.9) 0%, transparent 55%),
+        radial-gradient(ellipse 80% 60% at 85% 100%, rgba(11,22,41,0.95) 0%, transparent 50%);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* ── NAV ── */
+    nav.site-nav {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem 6%;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+    .nav-logo { display: inline-block; text-decoration: none; line-height: 0; }
+    .nav-logo img { display: block; height: 2.5rem; width: auto; }
+    .nav-back {
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      color: var(--mist);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--accent-warm); }
+    .nav-back svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; }
+
+    /* ── LAYOUT ── */
+    .page-wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 2rem 6% 6rem;
+    }
+
+    .page-eyebrow {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .page-title {
+      font-family: 'Lora', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 400;
+      line-height: 1.15;
+      margin-bottom: 0.5rem;
+    }
+
+    .page-subtitle {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--mist);
+      margin-bottom: 2rem;
+    }
+
+    /* ── DOWNLOAD BUTTONS ── */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--accent);
+      color: var(--navy-deep);
+      text-decoration: none;
+      padding: 0.95rem 1.9rem;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      box-shadow: 0 4px 20px rgba(77,168,218,0.18);
+      transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+    }
+    .btn-primary:hover {
+      background: var(--accent-warm);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(77,168,218,0.32);
+    }
+    .btn-primary svg { width: 17px; height: 17px; stroke: currentColor; fill: none; stroke-width: 2; }
+    .btn-primary .size { font-weight: 400; opacity: 0.7; }
+
+    .btn-dl {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      border: 1px solid rgba(77,168,218,0.35);
+      color: var(--accent);
+      background: rgba(77,168,218,0.07);
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+    .btn-dl:hover {
+      background: rgba(77,168,218,0.18);
+      color: var(--accent-warm);
+      border-color: rgba(126,206,244,0.6);
+    }
+    .btn-dl svg { width: 13px; height: 13px; stroke: currentColor; fill: none; stroke-width: 2; }
+    .dl-row { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+
+    /* ── KEY DETAILS ── */
+    .facts {
+      margin-top: 2.5rem;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--panel);
+      padding: 1.4rem 1.6rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.1rem 2rem;
+    }
+    .fact-key {
+      font-size: 0.63rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--mist);
+      margin-bottom: 0.35rem;
+    }
+    .fact-value { font-size: 0.88rem; font-weight: 300; line-height: 1.5; }
+    .fact-value a { color: var(--accent); text-decoration: none; }
+    .fact-value a:hover { color: var(--accent-warm); text-decoration: underline; }
+    .fact-value code {
+      font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+      font-size: 0.8rem;
+      color: var(--accent-warm);
+    }
+
+    /* ── SECTIONS ── */
+    section { margin-top: 4rem; }
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.9rem;
+      margin-bottom: 1.8rem;
+      flex-wrap: wrap;
+    }
+    .section-title {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.35rem, 2.6vw, 1.8rem);
+      font-weight: 400;
+    }
+    .section-note {
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: var(--mist);
+      max-width: 34rem;
+      margin: -0.8rem 0 1.8rem;
+    }
+
+    /* ── VIDEO ── */
+    .video-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+    .media-card {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--panel);
+      overflow: hidden;
+    }
+    .media-card video { display: block; width: 100%; height: auto; background: #000; }
+    .media-meta { padding: 1rem 1.1rem 1.1rem; }
+    .media-name { font-size: 0.92rem; font-weight: 500; margin-bottom: 0.25rem; }
+    .media-spec {
+      font-size: 0.74rem;
+      font-weight: 300;
+      color: var(--mist);
+      margin-bottom: 0.85rem;
+    }
+
+    /* ── SCENE GALLERY ── */
+    .scene-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+    .scene-card {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--panel);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .scene-figure { position: relative; aspect-ratio: 1 / 1; background: var(--navy-mid); }
+    .scene-figure a { display: block; width: 100%; height: 100%; }
+    .scene-figure img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .scene-hero-badge {
+      position: absolute;
+      top: 0.7rem;
+      left: 0.7rem;
+      font-size: 0.58rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--navy-deep);
+      background: var(--gold);
+      padding: 0.28rem 0.55rem;
+      border-radius: 999px;
+      font-weight: 500;
+      pointer-events: none;
+    }
+    .scene-meta {
+      padding: 0.9rem 1rem 1.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+    .scene-name { font-family: 'Lora', serif; font-size: 1.05rem; font-weight: 400; }
+
+    .period-switch {
+      display: inline-flex;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      overflow: hidden;
+      align-self: flex-start;
+      background: rgba(0,0,0,0.2);
+    }
+    .period-switch button {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: var(--mist);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.4rem 0.75rem;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .period-switch button:hover { color: var(--white); }
+    .period-switch button[aria-pressed="true"] {
+      background: var(--accent);
+      color: var(--navy-deep);
+      font-weight: 500;
+    }
+
+    /* ── LOGO ROW ── */
+    .logo-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+    .logo-card {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--panel);
+      padding: 1.5rem 1.2rem 1.1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+    }
+    /* Fixed height, not max-height: the SVG's intrinsic size is far smaller than the PNGs'
+       and it otherwise renders as a different-sized logo beside them. */
+    .logo-card img { height: 64px; width: auto; max-width: 100%; object-fit: contain; }
+    .logo-name { font-size: 0.8rem; color: var(--white-dim); }
+
+    /* ── FOOTER ── */
+    footer {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 6%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer-inner {
+      width: min(100%, 48rem);
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .footer-brand {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      letter-spacing: 0.12em;
+      color: var(--mist);
+      flex-shrink: 0;
+    }
+    .footer-links { display: flex; align-items: center; gap: 2rem; flex-shrink: 0; }
+    .footer-links a {
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      color: var(--mist);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--accent-warm); }
+    .footer-copy {
+      font-size: 0.7rem;
+      color: rgba(120,155,185,0.55);
+      width: min(100%, 48rem);
+      text-align: center;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      margin-top: 0.5rem;
+    }
+
+    @media (max-width: 820px) { .video-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 640px) {
+      .footer-inner { flex-direction: column; text-align: center; gap: 1.2rem; }
+      .footer-links { justify-content: center; }
+      .section-head { justify-content: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="/" class="nav-logo"><img src="/assets/logo/feel-wordmark.png" alt="Feel." /></a>
+    <a href="/" class="nav-back">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      Back to home
+    </a>
+  </nav>
+
+  <main class="page-wrap">
+
+    <header>
+      <p class="page-eyebrow">Press &amp; Editorial</p>
+      <h1 class="page-title">Media Assets</h1>
+      <p class="page-subtitle">Feel 1.11 — Halloween, Cozy to Spooky · October 2026</p>
+
+      <a class="btn-primary" href="/assets/media/halloween-2026/feel-halloween-2026-press-kit.zip" download>
+        <svg viewBox="0 0 24 24"><path d="M12 3v12"/><polyline points="7 11 12 16 17 11"/><path d="M4 20h16"/></svg>
+        Download everything <span class="size">· 57 MB</span>
+      </a>
+
+      <div class="facts">
+        <div>
+          <p class="fact-key">App</p>
+          <p class="fact-value">Feel — Weather Beyond Numbers<br /><a href="https://apps.apple.com/app/id6773975132">App Store</a> · <a href="https://feelweather.app">feelweather.app</a></p>
+        </div>
+        <div>
+          <p class="fact-key">Version</p>
+          <p class="fact-value">1.11, October 2026</p>
+        </div>
+        <div>
+          <p class="fact-key">Platforms</p>
+          <p class="fact-value">iPhone, iPad, Apple Watch</p>
+        </div>
+        <div>
+          <p class="fact-key">Price</p>
+          <p class="fact-value">Free; collection free during October</p>
+        </div>
+        <div>
+          <p class="fact-key">In-App Event</p>
+          <p class="fact-value">Halloween, Cozy to Spooky<br />Badge: New Season</p>
+        </div>
+        <div>
+          <p class="fact-key">Event window</p>
+          <p class="fact-value">1 Oct → 1 Nov 2026, 00:00 UTC</p>
+        </div>
+        <div>
+          <p class="fact-key">Deep link</p>
+          <p class="fact-value"><code>feel://event/halloween_2026</code></p>
+        </div>
+        <div>
+          <p class="fact-key">Press contact</p>
+          <p class="fact-value"><a href="mailto:contact@feelweather.app">contact@feelweather.app</a></p>
+        </div>
+      </div>
+    </header>
+
+    <section id="event-video">
+      <div class="section-head">
+        <h2 class="section-title">In-App Event video</h2>
+        <a class="btn-dl" href="/assets/media/halloween-2026/halloween-2026-event-video.zip" download>
+          <svg viewBox="0 0 24 24"><path d="M12 3v12"/><polyline points="7 11 12 16 17 11"/><path d="M4 20h16"/></svg>
+          Download section · 37 MB
+        </a>
+      </div>
+      <p class="section-note">The exact files submitted to App Store Connect. Text-free, silent, seamless 8-second loops.</p>
+
+      <div class="video-grid">
+        <figure class="media-card">
+          <video controls muted loop playsinline preload="metadata"
+                 poster="/assets/media/halloween-2026/harvest-village-event-card-1920x1080-first-frame.png">
+            <source src="/assets/media/halloween-2026/harvest-village-event-card-1920x1080.mp4" type="video/mp4" />
+          </video>
+          <figcaption class="media-meta">
+            <p class="media-name">Event Card</p>
+            <p class="media-spec">1920 × 1080 · H.264 · 30 fps · 18.6 MB</p>
+            <div class="dl-row">
+              <a class="btn-dl" href="/assets/media/halloween-2026/harvest-village-event-card-1920x1080.mp4" download>
+                <svg viewBox="0 0 24 24"><path d="M12 3v12"/><polyline points="7 11 12 16 17 11"/><path d="M4 20h16"/></svg>
+                MP4
+              </a>
+              <a class="btn-dl" href="/assets/media/halloween-2026/harvest-village-event-card-1920x1080-first-frame.png" download>
+                <svg viewBox="0 0 24 24"><path d="M12 3v12"/><polyline points="7 11 12 16 17 11"/><path d="M4 20h16"/></svg>
+                Still
+              </a>
+            </div>
+          </figcaption>
+        </figure>
+
+        <figure class="media-card">
+          <video controls muted loop playsinline preload="metadata"
+                 poster="/assets/media/halloween-2026/harvest-village-event-details-1080x1920-first-frame.png">
+            <source src="/assets/media/halloween-2026/harvest-village-event-details-1080x1920.mp4" type="video/mp4" />
+          </video>
+          <figcaption class="media-meta">
+            <p class="media-name">Event Details</p>
+            <p class="media-spec">1080 × 1920 · H.264 · 30 fps · 14.7 MB</p>
+            <div class="dl-row">
+              <a class="btn-dl" href="/assets/media/halloween-2026/harvest-village-event-details-1080x1920.mp4" download>
+                <svg viewBox="0 0 24 24"><path d="M12 3v12"/><polyline points="7 11 12 16 17 11"/><path d="M4 20h16"/></svg>
+                MP4
+              </a>
+              <a class="btn-dl" href="/assets/media/halloween-2026/harvest-village-event-details-1080x1920-first-frame.png" download>
+                <svg viewBox="0 0 24 24"><path d="M12 3v12"/><polyline points="7 11 12 16 17 11"/><path d="M4 20h16"/></svg>
+                Still
+              </a>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="scenes">
+      <div class="section-head">
+        <h2 class="section-title">Scene collection</h2>
+        <a class="btn-dl" href="/assets/media/halloween-2026/halloween-2026-scenes.zip" download>
+          <svg viewBox="0 0 24 24"><path d="M12 3v12"/><polyline points="7 11 12 16 17 11"/><path d="M4 20h16"/></svg>
+          Download section · 19 MB
+        </a>
+      </div>
+      <p class="section-note">Seven scenes, each at day, evening and night. 1440 × 1440 PNG — click any image to download it.</p>
+
+      <div class="scene-grid" id="scene-grid"></div>
+    </section>
+
+    <section id="logos">
+      <div class="section-head">
+        <h2 class="section-title">Icon &amp; logo</h2>
+      </div>
+
+      <div class="logo-row">
+        <div class="logo-card">
+          <img src="/assets/logo/app-icon.png" alt="Feel app icon" />
+          <a class="btn-dl" href="/assets/logo/app-icon.png" download>
+            <svg viewBox="0 0 24 24"><path d="M12 3v12"/><polyline points="7 11 12 16 17 11"/><path d="M4 20h16"/></svg>
+            App icon · 1024 PNG
+          </a>
+        </div>
+        <div class="logo-card">
+          <img src="/assets/logo/feel-wordmark.png" alt="Feel wordmark" />
+          <a class="btn-dl" href="/assets/logo/feel-wordmark.png" download>
+            <svg viewBox="0 0 24 24"><path d="M12 3v12"/><polyline points="7 11 12 16 17 11"/><path d="M4 20h16"/></svg>
+            Wordmark · PNG
+          </a>
+        </div>
+        <!-- Deliberately the PNG, not feel-text-mixed.svg: that SVG pulls Lora in over a relative
+             path and leaves the text unoutlined, so it falls back to a stock serif as soon as the
+             file leaves this site — exactly what a downloaded press asset must not do. -->
+        <div class="logo-card">
+          <img src="/assets/logo/feel-text-mixed-1024.png" alt="Feel logo, square" />
+          <a class="btn-dl" href="/assets/logo/feel-text-mixed-1024.png" download>
+            <svg viewBox="0 0 24 24"><path d="M12 3v12"/><polyline points="7 11 12 16 17 11"/><path d="M4 20h16"/></svg>
+            Logo, square · PNG
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">Feel &nbsp;·&nbsp; Weather Beyond Numbers</span>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+    <p class="footer-copy">&copy; <script>document.write(new Date().getFullYear())</script> Feel. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Declaration order matches the in-app picker: cozy autumn → magical → eerie → genuinely spooky.
+    const SCENES = [
+      { slug: 'halloween-harvest-village', name: 'Harvest Village', hero: true },
+      { slug: 'halloween-pumpkin-patch',   name: 'Pumpkin Patch' },
+      { slug: 'halloween-covered-bridge',  name: 'Covered Bridge' },
+      { slug: 'halloween-witchs-cottage',  name: "Witch's Cottage" },
+      { slug: 'halloween-hollow-woods',    name: 'Hollow Woods' },
+      { slug: 'halloween-haunted-manor',   name: 'Haunted Manor' },
+      { slug: 'halloween-old-cemetery',    name: 'Old Cemetery' }
+    ];
+
+    const PERIODS = [
+      // `alt` is a separate phrase from `label`: the switch wants one word, a screen reader wants
+      // a sentence that reads ("Harvest Village in daylight", not "Harvest Village at day").
+      { key: 'day', label: 'Day', alt: 'in daylight' },
+      { key: 'evening', label: 'Evening', alt: 'in the evening' },
+      { key: 'night', label: 'Night', alt: 'at night' }
+    ];
+
+    const DEFAULT_PERIOD = 'night';
+
+    // WebP for browsing, PNG for the download: the page stays light to page through, and anyone
+    // who wants the asset itself gets the real file.
+    const displayFor  = (slug, period) => `/assets/media/halloween-2026/scenes/${slug}-${period}.webp`;
+    const downloadFor = (slug, period) => `/assets/media/halloween-2026/scenes/${slug}-${period}.png`;
+
+    const grid = document.getElementById('scene-grid');
+
+    grid.innerHTML = SCENES.map(scene => {
+      const buttons = PERIODS.map(p => `
+              <button type="button"
+                      data-slug="${scene.slug}"
+                      data-period="${p.key}"
+                      aria-pressed="${p.key === DEFAULT_PERIOD}">${p.label}</button>`).join('');
+
+      return `
+        <figure class="scene-card" data-slug="${scene.slug}">
+          <div class="scene-figure">
+            <a id="dl-${scene.slug}"
+               href="${downloadFor(scene.slug, DEFAULT_PERIOD)}"
+               download
+               title="Download ${scene.name} at night, PNG">
+              <img id="img-${scene.slug}"
+                   src="${displayFor(scene.slug, DEFAULT_PERIOD)}"
+                   alt="${scene.name} at night"
+                   loading="lazy"
+                   width="1440" height="1440" />
+            </a>
+            ${scene.hero ? '<span class="scene-hero-badge">Hero scene</span>' : ''}
+          </div>
+          <figcaption class="scene-meta">
+            <h3 class="scene-name">${scene.name}</h3>
+            <div class="period-switch" role="group" aria-label="${scene.name} time of day">${buttons}
+            </div>
+          </figcaption>
+        </figure>`;
+    }).join('');
+
+    // Fetch a card's other two periods only once someone looks like they will press the switch.
+    // Preloading all 21 up front would pull the whole gallery down before anyone asked for it.
+    const warmed = new Set();
+    function warm(slug) {
+      if (warmed.has(slug)) return;
+      warmed.add(slug);
+      for (const period of PERIODS) {
+        if (period.key === DEFAULT_PERIOD) continue;
+        new Image().src = displayFor(slug, period.key);
+      }
+    }
+
+    for (const card of grid.querySelectorAll('.scene-card')) {
+      const warmThisCard = () => warm(card.dataset.slug);
+      card.addEventListener('pointerenter', warmThisCard, { once: true });
+      card.addEventListener('focusin', warmThisCard, { once: true });
+    }
+
+    grid.addEventListener('click', event => {
+      const button = event.target.closest('button[data-period]');
+      if (!button) return;
+
+      const { slug, period } = button.dataset;
+      const image = document.getElementById(`img-${slug}`);
+      const download = document.getElementById(`dl-${slug}`);
+      const scene = SCENES.find(s => s.slug === slug);
+      const phrase = PERIODS.find(p => p.key === period).alt;
+
+      // A touch user gets no pointerenter, so the warm has to happen here too.
+      warm(slug);
+
+      image.src = displayFor(slug, period);
+      image.alt = `${scene.name} ${phrase}`;
+      download.href = downloadFor(slug, period);
+      download.title = `Download ${scene.name} ${phrase}, PNG`;
+
+      for (const sibling of button.parentElement.querySelectorAll('button')) {
+        sibling.setAttribute('aria-pressed', String(sibling === button));
+      }
+    });
+  </script>
+
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
